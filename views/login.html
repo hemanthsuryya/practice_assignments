@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="../css/styles.css">
+
+</head>
+<body>
+    <div id="form-container">
+        <div id="login-form-div">
+            <h2>Login</h2>
+            <form id="loginForm" action="/users/dashboard" method="POST">
+                Email ID
+                <input type="email" name="emailId" placeholder="joe@mail.com"><br/> 
+                Password
+                <input type="password" name="password" placeholder="Password" /><br/> 
+                <input type="submit" value="Login" />
+            </form>
+            <a href="/users/register">New user</a>
+        </div>
+        
+    </div>
+</body>
+</html>

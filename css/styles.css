@@ -1,0 +1,9 @@
+#form-container {
+    background-color: lightblue;
+    border: 2px solid blue;
+    padding: 70px 0;
+    text-align: center;       
+}
+.input{
+    padding: 10px 0;
+}
