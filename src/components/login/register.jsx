@@ -7,9 +7,6 @@ function Register() {
         emailId:"", username:"", phoneno:"", age:"", address:"", password:""
 
     })
-    // constructor(props){
-    //     super(props);
-    // }
     useEffect(()=> {
         if(localStorage.getItem('emailId')){
             nav('/');

@@ -3,8 +3,6 @@ import { useNavigate } from 'react-router-dom';
 
 function Login () {
     const nav = useNavigate();
-    // const [emailId, setEmailId] = useState("");
-    // const [password, setPassword] = useState("");
     const [creds, setCreds] = useState({
         emailId:"",
         password:""
