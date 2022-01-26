@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <h1 align="center">Contact Us</h1>
+    <div id="navMenu" align="center">
+        <a href="index.html">Dashboard</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contactUs.html">Contact Us</a>
+        <a href="login.html">Login</a>
+    </div>
+</head>
+<body bgcolor="#f4d291">
+    <div class="contactUsForm">
+        <h3>Fill out this form</h3>
+        <form>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required><br />
+            <label for="email">E mail</label>
+            <input type="email" id="email" name="email" required><br />
+            <label for="password">Secret text</label>
+            <input type="password" id="password" name="password" required><br /> <br /> 
+            
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required>
+            <br />
+            <br />
+            <label for="gender">Gender</label><br />
+            <input type="radio" id="male" name="gender" required> 
+            <label for="male">Male</label> <br />
+            <input type="radio" id="female" name="gender">
+            <label for="female">Female</label> <br />
+            <input type="radio" id="others" name="gender">
+            <label for="others">Others</label> <br /> <br /> 
+            
+            <label for="phone">Phone no. (insert '-' too)</label>
+            <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br /><br />
+
+            <label for="address">Address</label>
+            <textarea id="address" name="address" rows="5" cols="40" required>
+                
+            </textarea><br /><br />
+
+            <label for="pet">Pet Allergies</label><br />
+            <input type="checkbox" id="cat" name="cat" value="cat">
+            <label for="cat">Cat </label><br />  
+            <input type="checkbox" id="dog" name="dog" value="dog">
+            <label for="dog">Dog </label><br /> <br /> 
+
+            <label for="preColor">Preferred color</label><br />
+            <input type="color" id="preColor" name="preColor"><br /><br />
+
+            <label for="fileUpload">Any documents to submit</label>
+            <input type="file" id="fileUpload" name="fileUpload"><br /> <br />
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+<footer>
+    <div align="center">
+    <p>By Hemanth Surya S <br />
+    <a href="mailto:surya@mail.com">surya@mail.com</a></p>
+    </div>
+</footer>
+</html>
