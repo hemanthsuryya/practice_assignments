@@ -1,0 +1,135 @@
+html, body
+{
+    height: 100%;
+}
+.sidebar {
+    border-radius: 25px;
+    border: 2px solid #99764d;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #ffffff;
+    position: fixed;
+    height: 85%;
+    overflow: auto;
+  }
+  
+  /* Sidebar links */
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  /* Active/current link */
+  .sidebar a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  /* Links on mouse-over */
+  .sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+  .container {
+    border-radius: 25px;
+    border: 2px solid #894bbb;
+    margin-left: 230px;
+    margin-bottom: 100px;
+    padding: 1px 16px;
+    /* height:800px; */
+    padding-bottom: 100px; 
+  }
+  .container .navMenu{
+      text-align: center;
+  }
+
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: lightslategray;
+    color: white;
+    text-align: center;
+  }
+
+  .item{
+    margin: 5px;
+    border-radius: 25px;
+    border: 2px solid rgb(179, 105, 105);
+    float: left;
+    width: 285px;
+    background-color: #f7f5f2;
+    /* padding: auto; */
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  }
+.item img {
+    width: 100%;
+    height: auto;
+    border-radius: 25px 25px 0 0;
+    overflow: hidden;
+}
+
+    .item .description{
+        border-radius: 0 0 25px 25px;
+        padding: 15px;
+        text-align: center;
+        background-color: #f7f5f2;
+    
+    }
+  #cryptoPrice table {
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(211, 192, 223));
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  }
+
+  .container form {
+    /* -webkit-border-radius: 10px 10px 10px 10px; */
+    border-radius: 10px 10px 10px 10px;
+    background: #fff;
+    padding: 30px;
+    /* height: 80%; */
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    text-align: center;
+    overflow: hidden;
+    
+  }
+
+  .container form button{
+      height: 40px;
+      width: 100px;
+      background-image: linear-gradient(white, #e1f8dc);
+      border-radius: 10px;
+  }
+
+  .container form input{
+    border-radius: 10px ;
+    /* padding: 10px; */
+    display: flex;
+    text-align: center;
+    height: 25px;
+    flex: 0 0 200px;
+    margin-left: 10px;
+    padding-right: 50px;
+    /* flex-wrap: wrap; */
+    
+  }
+
+  .container form label{
+    margin: 5px;
+    /* padding: 10px; */
+    display: flex;
+    /* flex-wrap: wrap; */
+    
+    flex-direction: row;
+    justify-content: flex-end;
+    text-align: right;
+    width: 400px;
+    line-height: 26px;
+    margin-bottom: 10px;
+}

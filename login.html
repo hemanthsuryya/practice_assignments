@@ -4,25 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+
     <title>Login</title>
-    <h1 align="center">Login</h1>
-    <div id="navMenu" align="center">
+    
+</head>
+<body bgcolor="#e1f8dc">
+    <div class="sidebar">
         <a href="index.html">Dashboard</a>
         <a href="gallery.html">Gallery</a>
         <a href="contactUs.html">Contact Us</a>
         <a href="login.html">Login</a>
     </div>
-</head>
-<body bgcolor="#e1f8dc">
-    <div align="center">
-    <h3>Please enter credentials</h3>
-    <form>
-        <label for="username">Username</label>
-        <input type="text" id="username" name="username" placeholder="johndoe" required><br />
-        <label for="password">Password</label>
-        <input type="text" id="password" name="password" required><br /><br />
-        <input type="submit" value="Login">
-    </form>
+    <div class="container" align="center">
+        <h1 align="center">Login</h1>
+        <div class="navMenu">
+            <a href="index.html">Dashboard</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contactUs.html">Contact Us</a>
+            <a href="login.html">Login</a>
+        </div>
+        <h3>Please enter credentials</h3>
+        <form>
+            <label for="username">Username
+            <input type="text" id="username" name="username" placeholder="johndoe" required>
+            </label><br />
+            <label for="password">Password
+            <input type="text" id="password" name="password" required>
+            </label><br /><br />
+            
+            <button type="submit" id="submit" value="Login" > Login</button>
+        </form>
     </div>
 </body>
 <footer>

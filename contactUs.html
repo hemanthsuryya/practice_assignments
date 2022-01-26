@@ -4,59 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+
     <title>Contact Us</title>
-    <h1 align="center">Contact Us</h1>
-    <div id="navMenu" align="center">
+    
+</head>
+<body bgcolor="#f4d291">
+    <div class="sidebar">
         <a href="index.html">Dashboard</a>
         <a href="gallery.html">Gallery</a>
         <a href="contactUs.html">Contact Us</a>
         <a href="login.html">Login</a>
     </div>
-</head>
-<body bgcolor="#f4d291">
-    <div class="contactUsForm">
+    <div class="container" align="center">
+        <h1 align="center">Contact Us</h1>
+        <div class="navMenu" >
+            <a href="index.html">Dashboard</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contactUs.html">Contact Us</a>
+            <a href="login.html">Login</a>
+        </div>
         <h3>Fill out this form</h3>
-        <form>
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" required><br />
-            <label for="email">E mail</label>
-            <input type="email" id="email" name="email" required><br />
-            <label for="password">Secret text</label>
-            <input type="password" id="password" name="password" required><br /> <br /> 
-            
-            <label for="dob">Date of Birth</label>
+        <form >
+            <label for="name">Full Name
+                <input type="text" id="name" name="name" required>
+            </label><br />
+            <label for="email">E mail
+            <input type="email" id="email" name="email" required>
+            </label><br />
+            <label for="password">Secret text
+            <input type="password" id="password" name="password" required> 
+            </label><br />
+            <label for="dob">Date of Birth
             <input type="date" id="dob" name="dob" required>
+            </label>
             <br />
             <br />
-            <label for="gender">Gender</label><br />
-            <input type="radio" id="male" name="gender" required> 
-            <label for="male">Male</label> <br />
-            <input type="radio" id="female" name="gender">
-            <label for="female">Female</label> <br />
-            <input type="radio" id="others" name="gender">
-            <label for="others">Others</label> <br /> <br /> 
+            <span for="gender">Gender</span><br />
+            <label for="male">Male 
+            <input type="radio" id="male" name="gender" required></label> 
+            <label for="female">Female
+            <input type="radio" id="female" name="gender"></label>
+            <label for="others">Others 
+            <input type="radio" id="others" name="gender"></label>
+              
             
-            <label for="phone">Phone no. (insert '-' too)</label>
-            <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br /><br />
+            <label for="phone">Phone no.
+            <input type="tel" id="phone" name="phone" placeholder="123-456-7890"  required></label>
 
-            <label for="address">Address</label>
+            <label for="address">Address
             <textarea id="address" name="address" rows="5" cols="40" required>
                 
-            </textarea><br /><br />
+            </textarea><br /></label><br />
 
-            <label for="pet">Pet Allergies</label><br />
-            <input type="checkbox" id="cat" name="cat" value="cat">
-            <label for="cat">Cat </label><br />  
-            <input type="checkbox" id="dog" name="dog" value="dog">
-            <label for="dog">Dog </label><br /> <br /> 
+            <span for="pet">Pet Allergies</span>
+            
+            <label for="cat">Cat 
+            <input type="checkbox" id="cat" name="cat" value="cat" /></label> 
+            <label for="dog">Dog 
+            <input type="checkbox" id="dog" name="dog" value="dog" /></label> <br /> 
+            
 
-            <label for="preColor">Preferred color</label><br />
-            <input type="color" id="preColor" name="preColor"><br /><br />
+            <label for="preColor">Preferred color
+            <input type="color" id="preColor" name="preColor"></label><br />
 
-            <label for="fileUpload">Any documents to submit</label>
-            <input type="file" id="fileUpload" name="fileUpload"><br /> <br />
+            <label for="fileUpload">Any documents to submit
+            <input type="file" id="fileUpload" name="fileUpload"></label><br /> 
 
-            <input type="submit" value="Submit">
+            <button type="submit" value="Submit">Submit</button>
         </form>
     </div>
 </body>
