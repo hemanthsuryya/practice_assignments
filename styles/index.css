@@ -1,0 +1,105 @@
+.box-shadow {
+  box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+}
+/* Sidebar  */
+.sidebar {
+  border-radius: 25px;
+  border: 2px solid #00000081;
+  width: 200px;
+  background-color: #ffffff;
+  position: fixed;
+  height: 85%;
+  overflow: auto;
+}
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+.sidebar a:hover:not(.active) {
+  background-color: #b1aeae;
+  color: white;
+}
+.container {
+  border-radius: 25px;
+  border: 2px solid #00000081;
+  margin-left: 230px;
+  margin-bottom: 100px;
+  padding: 10px 0 100px 10px;
+  min-height: 520px;
+}
+.container .navMenu {
+  text-align: center;
+}
+.container form {
+  border-radius: 25px;
+  background: #fff;
+  padding: 30px;
+  max-width: 450px;
+  position: relative;
+  box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+  text-align: center;
+  overflow: hidden;
+}
+.container form button {
+  height: 40px;
+  width: 100px;
+  background-image: linear-gradient(white, #e1f8dc);
+  border-radius: 10px;
+}
+.container form input {
+  border-radius: 10px;
+  /* padding: 10px; */
+  display: flex;
+  text-align: center;
+  height: 25px;
+  flex: 0 0 200px;
+  margin-left: 10px;
+  padding-right: 50px;
+}
+.container form label {
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  text-align: right;
+  width: 400px;
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+.item {
+  margin: 5px;
+  border-radius: 25px;
+  border: 2px solid #b36969;
+  float: left;
+  width: 285px;
+  background-color: #f7f5f2;
+  /* padding: auto; */
+  box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+}
+.item img {
+  width: 100%;
+  height: auto;
+  border-radius: 25px 25px 0 0;
+  overflow: hidden;
+}
+.item .description {
+  border-radius: 0 0 25px 25px;
+  padding: 15px;
+  text-align: center;
+  background-color: #f7f5f2;
+}
+#cryptoPrice table {
+  background-image: linear-gradient(#ffffff, #d3c0df);
+  box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+}
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #6d6b6b;
+  color: white;
+  text-align: center;
+}
