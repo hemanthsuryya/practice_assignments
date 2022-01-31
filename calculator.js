@@ -19,7 +19,6 @@ classicCal.prototype.division = function(){
 }
 
 classicCal.prototype.ev = function(){
-    console.log(this.a);
     return eval(this.a);
 }
 
