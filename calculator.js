@@ -1,6 +1,13 @@
-function classicCal(c, d) {
-    this.a = c;
-    this.b = d;   
+// Set operands here
+const a = 5;
+const b = 6;
+
+// If multiple operands provide it as string to problem variable
+const problem = '2+4*8/2';
+
+function classicCal(A, B) {
+    this.a = A;
+    this.b = B;   
 }
 
 classicCal.prototype.multiplication = function() {
@@ -22,48 +29,14 @@ classicCal.prototype.ev = function(){
     return eval(this.a);
 }
 
+const  ops = new classicCal(a, b, problem);
 
+console.log(a + ' + '+ b +' = ' + ops.sum());
 
-if(process.argv.length == 5){
-    let op = process.argv[2];
-    let c = parseFloat(process.argv[3]);    
-    let d = parseFloat(process.argv[4]);
+console.log(a + ' - '+ b +' = ' + ops.subtraction());
 
-    const  ops = new classicCal(c, d);
+console.log(a + ' x '+ b +' = ' + ops.multiplication());
 
-    switch (op) {
-        case 'add':
-            console.log(ops.sum());
-            break;
-        case 'div':
-            console.log(ops.division()); 
-            break;
-        case 'sub':
-            console.log(ops.subtraction());
-            break;
-        case 'mul':
-            console.log(ops.multiplication());
-            break;
-        default:
-            console.log('Arguments: <OP> <First number> <Second number>')
-            console.log('OP can be add / sub / mul / div');
-            console.log("----------------OR--------------");
-            console.log('One argument as problem without spaces <whole equation>');
-            console.log('node calc.js 5+6-4*3');
-            break;
-    }
-}
-else if(process.argv.length == 3)
-{
-    let c = process.argv[2];    
-    const  ops = new classicCal(c, 0);
-    console.log(ops.ev());
-}
-else{
-    console.log('Arguments: <OP> <First number> <Second number>')
-    console.log('OP can be add / sub / mul / div');
-    console.log('e.g.:node calc.js add 6 5');
-    console.log("----------------OR--------------");
-    console.log('One argument as problem without spaces <whole equation>');
-    console.log('e.g.: node calc.js 5+6-4*3');
-}
+console.log(a + ' / '+ b +' = ' + ops.division()); 
+
+console.log(problem +' = '+ ops.ev());
