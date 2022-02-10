@@ -1,25 +1,46 @@
-import logo from './logo.svg';
 import './App.css';
+// import React, {Component} from "react"
+import Item from './components/card/Item'
+import jsonData from './data.json'
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
+import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      data: [],
+    }
+    this.delItem = this.delItem.bind(this);
+  }
+  componentDidMount(){
+    this.setState({
+      data: jsonData
+    })
+  }
+  delItem = (id) => {
+    this.setState({
+      data: this.state.data.filter((item)=> item.id !== id)
+    })
+  }
+  
+  render(){
+    return (
+      <div className="App">
+        <header className="App-header">
+          <Header />
+        </header>
+        <ul className="productList">
+        {this.state.data.map((d) => 
+          <li><Item key={d.id} id={d.id} title={d.title} src={d.img} delItem={this.delItem}  /></li>
+        )}
+        </ul>
+        <br />
+        <Footer />
+      </div>
+    )
+  };
 }
 
 export default App;

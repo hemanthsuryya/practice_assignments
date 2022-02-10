@@ -1,0 +1,15 @@
+#footer {
+    position: fixed;
+    margin-bottom: 0vh;
+    bottom: 8px;
+    left: 50%;
+    transform: translate(-50%, 10%);
+    display: block;
+    /* padding: 0 15px 0 15px; */
+    background-color: hsl(0, 0%, 0%);
+    color: white;
+    opacity: 0.5;
+    width: 100%;
+    font-family: Georgia, serif;
+
+}
