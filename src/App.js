@@ -1,23 +1,39 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
 import './App.css';
+import Item from './components/card/Item'
+import jsonData from './data.json'
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
 
 function App() {
+  // const [count, setCount] = useState(0);
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    setData(jsonData)
+  },[]);
+
+  let delItem = (id) =>{
+    setData(data.filter((item) => item.id !== id))
+  }
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Header />
       </header>
+      <ul className="productList">
+      {data.map((d) => 
+        <li><Item key={d.id} id={d.id} title={d.title} src={d.img} delItem={delItem} /></li>
+      )}
+      </ul>
+      <br />
+    {/* <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div> */}
+
+      <Footer />
     </div>
   );
 }
