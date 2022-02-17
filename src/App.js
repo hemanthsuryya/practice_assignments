@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import {store, incrementCount, decrementCount} from './actions/action.js';
+
 
 function App() {
+  // const number = useSelector(state) => state.
   return (
+    
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Counter</h1>
+      <button onClick={e => store.dispatch(decrementCount())}>Decrement</button>
+      <h2 id="num">0</h2>
+      {store.subscribe(() => {
+        let count = store.getState().count;
+        document.getElementById("num").innerHTML = count;
+      })}
+      <button onClick={e => store.dispatch(incrementCount())}>Increment</button>
+
     </div>
   );
 }
