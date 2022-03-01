@@ -32,18 +32,14 @@ const renderItem = ({index, ...rest}) => {
 	);
 };
 
-const updateData = (items, dataSize, noLabel) => {
-	const
-		itemNumberDigits = dataSize > 0 ? ((dataSize - 1) + '').length : 0,
-		headingZeros = Array(itemNumberDigits).join('0');
-
-	items.length = 0;
-
-	for (let i = 0; i < dataSize; i++) {
+const updateData = (filesys, items, dataSize, noLabel) => {
+	// filesys.length = 0;
+	console.log('updateData', filesys)
+	for (let i = 1; i < filesys.length; i++) {
 		const
-			count = (headingZeros + i).slice(-itemNumberDigits),
-			text = `Item ${count}`,
-			subText = `SubItem ${count}`,
+			// count = (headingZeros + i).slice(-itemNumberDigits),
+			text = Array.isArray(filesys[i]) ? filesys[i][0]: filesys[i],
+			subText = `SubItem ${text}`,
 			color = Math.floor((Math.random() * (0x1000000 - 0x101010)) + 0x101010).toString(16),
 			source = {
 				'hd': `https://www.teahub.io/photos/full/301-3012186_best-iphone-wallpapers-colour-blur.jpg`,
@@ -64,22 +60,22 @@ const updateData = (items, dataSize, noLabel) => {
 class app extends Component {
 	constructor (props) {
 		super(props);
-		console.log('crilll', props.filesys)
+		console.log('crilll', props.filesys.length)
 		this.state = {
 			hideScrollbar: "auto",
 			horizontal: false,
 			noLabel: false,
-			numItems: 100,
+			numItems: props.filesys[props.filesys.length-1].length-1,
 			minHeight: 500,
 			minWidth: 650,
 			spacing: 24,
 			spotlightDisabled: false,
 			translate: false,
 			wrap: false,
-			filesys: props.filesys
+			filesys: props.filesys[0]
 		};
 		this.rootRef = createRef();
-		updateData(items, this.state.numItems, this.state.noLabel);
+		updateData(this.state.filesys, items, this.state.numItems, this.state.noLabel);
 	}
 
 	onKeyDown = () => {
